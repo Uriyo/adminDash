@@ -1,37 +1,81 @@
 import React from 'react'
+
+import {  
+  SwapVertOutlinedIcon,
+  AppsOutlinedIcon,
+  TuneOutlinedIcon,
+  MeetingRoomOutlinedIcon,
+  ImportExportOutlinedIcon
+} from "../../utils/utils"
 import "./home.scss"
 import Sidebar from '../../components/sidebar/Sidebar'
 import Navbar from '../../components/navbar/Navbar'
-import Widget from '../../components/widget/Widget'
-import Featured from '../../components/featured/Featured'
-import Chart from '../../components/chart/Chart'
 import  List  from '../../components/table/Table'
 
 
 const Home = () => {
   return (
-    <div className='home'>
-        <Sidebar/>
-        <div className="homeContainer">
-          <Navbar/>
-          <div className="widgets">
-            <Widget type="user"/>
-            <Widget type="order"/>
-            <Widget type="earnings"/>
-            <Widget type="balance"/>
+    <div className="home">
+      <Sidebar />
+      <div className="homeContainer">
+        <Navbar />
+        <div className="listContainer">
+          <div className="listTitle">
+            <button>
+              <div>
+                <AppsOutlinedIcon className="icons" />
+                All Brands ▾
+              </div>
+            </button>
+            <button>Desk ▾</button>
+            <button>Tags ▾</button>
+            <button>
+              <div>
+                Sort
+                <SwapVertOutlinedIcon className="icons" />
+              </div>
+            </button>
+            <button>
+              <div>
+                Filter
+                <TuneOutlinedIcon className="icons" />
+              </div>
+            </button>
+            <div
+              style={{
+                display: "flex",
+                width: "9%",
+                paddingLeft: "300px",
+                justifyContent: "space-between",
+              }}
+            >
+              <button
+                style={{
+                  padding: "5px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <MeetingRoomOutlinedIcon />
+                Import/Export
+              </button>
+              <button
+                style={{
+                  padding: "5px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <ImportExportOutlinedIcon />
+                Meeting
+              </button>
+            </div>
           </div>
-          <div className="charts">
-            <Featured/>
-            <Chart aspect={2/1} title={"Last 6 months (Revenue)"}/>
-          </div>
-          <div className="listContainer">
-            <div className="listTitle">Latest Transactions</div>
-              <List/>
-          </div>
-          home stuff
+          <List />
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Home

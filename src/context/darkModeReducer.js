@@ -1,3 +1,5 @@
+// Define a reducer function for managing dark mode state
+
 const DarkModeReducer=(state,action)=>{
     switch(action.type){
         case "LIGHT":{

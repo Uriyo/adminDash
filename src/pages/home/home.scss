@@ -22,6 +22,31 @@
                 color: gray;
                 margin-bottom: 15px;
                 font-weight: 15px;
+                display: flex;
+                // justify-content: baseline;
+                // justify-content: space-between;
+                // align-items: center;
+                button{
+                    margin-right: 15px;
+                    border: none;
+                    width: 120px;
+                    height: 40px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    &:hover{
+                        -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.47);
+                        box-shadow:2px 4px 10px 1px rgba(201,201,201,0.47);
+                    }
+                    div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .icons{
+                        font-size: medium;
+                        padding: 2px;
+                    }
+                }
             }
         }
     }

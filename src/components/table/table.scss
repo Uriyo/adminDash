@@ -10,6 +10,73 @@
             margin-right: 10px;
         }
     }
+    .memberImagesWrapper{
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    }
+    .category{
+        padding: 5px;
+        border-radius: 5px;
+        
+        &.Web_Services{
+            color: blue;
+            background-color: rgba(37, 166, 247, 0.173);
+        }
+        &.Publishing{
+            color: violet;
+            background-color: rgba(139, 37, 248, 0.173);
+        }
+        &.Transpotation{
+            color: pink;
+            background-color: rgba(233, 119, 245, 0.173);
+        }
+        
+        &.Finance{
+            color: blue;
+            background-color: rgba(37, 166, 247, 0.173);
+        }
+        
+        &.SAAS{
+            color: green;
+            background-color: rgba(2, 166, 2, 0.173);
+        }
+        
+        &.B2B{
+            color: red;
+            background-color: rgba(250, 32, 32, 0.173);
+        }
+        &.Marketplace{
+            color: green;
+            background-color: rgba(2, 166, 2, 0.173);
+        }
+        &.Mobile{
+            color: rgb(155, 155, 0);
+            background-color: rgba(250, 228, 32, 0.173);
+        }
+        &.E-commerce{
+            color: orange;
+            background-color: rgba(240, 146, 14, 0.173);
+        }
+        &.Automation{
+            color: purple;
+            background-color: rgba(248, 63, 248, 0.173);
+        }
+    }
+    .tags{
+        padding: 5px;
+        border-radius: 5px;
+        color: gray;
+        background-color: rgba(246, 246, 246, 0.735);
+        border: 1px solid rgb(152, 152, 152);
+
+    }
     .status{
         padding: 5px;
         border-radius: 5px;
@@ -24,4 +91,16 @@
             background-color: rgba(255, 255, 0, 0.225);
         }
     }
+    .btn{
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+        padding: 6px;
+        cursor: pointer;
+        &:hover{
+            -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.47);
+            box-shadow:2px 4px 10px 1px rgba(201,201,201,0.47);
+        }
+    }
 }
+

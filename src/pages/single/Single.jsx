@@ -44,11 +44,10 @@ const Single = () => {
             </div>
           </div>
           <div className="right">
-            <Chart aspect={3/1} title={"User's Last 6 months Spending"}/>
+            <Chart aspect={3/1} title={"Company's Last 6 months Spending"}/>
           </div>
         </div>
         <div className="bottom">
-          <h1 className="title">Last Transactions</h1>
           <List/>
         </div>
         

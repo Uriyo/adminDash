@@ -13,7 +13,26 @@
         .logo{
             font-size: 20px;
             font-weight: bold;
-            color: #6439ff;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .item{
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                position: relative;
+
+                .avatar{
+                   width: 25px;
+                   height: 25px; 
+                   border-radius: 50%;
+                   padding-left: 5px;
+                   margin-right: 0;
+                   padding-right: 0;
+                   margin-left: 15px;
+                }
+        }
         }
     }
     hr{
@@ -22,6 +41,7 @@
     }
     .center{
         padding-left: 10px;
+        padding-right: 10px;
 
         ul{
             list-style: none;
@@ -34,6 +54,9 @@
                 color: #999;
                 margin-top: 15px;
                 margin-bottom: 10px;
+                border: 1pt solid #dad9d9;
+                border-radius: 5%;
+                padding: 4px 2px 2px 4px;
             }
 
             li{
@@ -41,20 +64,99 @@
                 align-items: center;
                 padding: 5px;
                 cursor: pointer;
+                position: relative;
 
                 &:hover{
-                    background-color: #ece8ff;
+                    background-color: #ddddddc3;
                 }
 
                 .icon{
-                    font-size: 30px;
-                    color: #7451f8;
+                    font-size: 20px;
+                    color: black;
+                }
+                .teamcnt{
+                    display: flex;
+                    align-items: center;
+                }
+                .addTeam{
+                    color: rgb(137, 137, 137);
+                    margin-right: 2px;
+                    &:hover{
+                        color:white
+                    }
+                }
+                .addTeamicon{
+                    font-size: 20px;
+                    color: rgb(137, 137, 137);
+                    
+                    &:hover{
+                        color:white
+                    }
+                
                 }
                 span{
-                    font-size: 18px;
+                    font-size: 15px;
                     font-weight: 600;
-                    color: #888;
+                    color: rgb(137, 137, 137);
                     margin-left: 10px;
+                    
+                }
+                .btn{
+                    background-color: black;
+                    color: white;
+                    border: none;
+                    font-size: small;
+                    border-radius: 5px;
+                    padding: 5px;
+                    position: absolute; 
+                    right: 10px; 
+                    cursor: pointer;
+                }
+            }
+            .usefuls{
+                border: 1px solid #dad9d9;
+                border-radius: 5%;
+                padding: 4px 2px 2px 4px;
+            }
+            .subBtn{
+                border: none;
+                padding: 5px;
+                color: gray;
+                background: none;
+                margin-top: 5px;
+                
+                
+                div{
+                    display: flex;
+                    align-items: center;    
+                    font-weight: 600;
+                    font-size: 15px;
+                    padding-left: 10px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-right: 42px;
+                    margin-top: 2px;
+                    cursor: pointer;
+                    
+
+                    &:hover{
+                        background-color: #ddddddc3;
+                        color: white;
+                    }
+                }
+            }
+            .trial{
+                background-color: #b7b7b7;
+                border-radius: 5px;
+                padding: 5px;
+                padding-bottom: 10px;
+                
+                &:hover{
+                    background-color: #d2d2d2;
+                }
+                span{
+                    color: white;
+                    font-size: smaller;
                 }
             }
         } 

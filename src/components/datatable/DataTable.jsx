@@ -5,10 +5,6 @@ import { userColumns,userRows } from '../../datatablesource'
 import "./datatable.scss"
 import {Link} from "react-router-dom";
 
-
-
-
-
 const DataTable = () => {
   const [data,setData]=useState(userRows);
   
@@ -28,8 +24,6 @@ const DataTable = () => {
                 {" "}
                 <div className="viewButton">View</div>
               </Link>
-              
-                
                 <div className="deleteButton" onClick={() => handleDelete(params.row.id)}>
                   Delete
                 </div>
@@ -43,7 +37,6 @@ const DataTable = () => {
     <div className='datatable'>
       <div className="datatableTitle">
         Users
-        <Link to="/users/new"  className='link'>Add New</Link>
       </div>
         <DataGrid
         className='datagrid'

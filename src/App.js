@@ -1,9 +1,9 @@
 import Home from "./pages/home/Home";
-import Login from "./pages/login/Login";
 import List from "./pages/list/List.jsx";
 import Single from "./pages/single/Single.jsx";
-import New from "./pages/new/New";
 import "./style/dark.scss"
+
+//Importing  the BrowserRouter and Route components for implementing routes
 
 import {
   BrowserRouter,
@@ -11,40 +11,43 @@ import {
   Route,
 } from "react-router-dom";
 
-import { userInputs,productInputs } from "./formSource.js";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext.js";
 
 
 function App() {
+  
+  //Acessing the  dark mode context using useContext hook
   const {darkMode}=useContext(DarkModeContext);
 
   return (
-    <div className= {darkMode? "app dark":"app"}>
+    <div className={darkMode ? "app dark" : "app"}>
       <BrowserRouter>
         <Routes>
           <Route path="/">
-            <Route index element={<Home/>} />
-            <Route path="login" element={<Login />} />
+            <Route index element={<Home />} />
+            
             <Route path="users">
               <Route index element={<List />} />
               <Route path=":userId" element={<Single />} />
-              <Route
-                path="new"
-                element={<New inputs={userInputs} title={"Add New User"} />}
-              />
-              <Route path="edit/:id" element={<New isEditing={true} />} />
             </Route>
-            <Route path="products">
+
+            <Route path="design">
               <Route index element={<List />} />
-              <Route path=":productId" element={<Single />} />
-              <Route
-                path="new"
-                element={
-                  <New inputs={productInputs} title={"Add New Product"} />
-                }
-              />
             </Route>
+
+            <Route path="developer">
+              <Route index element={<List />} />
+            </Route>
+
+            <Route path="sales">
+              <Route index element={<List />} />
+            </Route>
+
+            <Route path="marketing">
+              <Route index element={<List />} />
+            </Route>
+
           </Route>
         </Routes>
       </BrowserRouter>
